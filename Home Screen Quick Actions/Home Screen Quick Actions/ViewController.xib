@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
-                <outlet property="_lblActionTriggered" destination="eQI-7d-tRB" id="8Ih-4g-6xd"/>
                 <outlet property="_lblNumberOfActions" destination="MSi-eT-tuV" id="NCF-pe-VEo"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Daw-Ro-LAQ"/>
             </connections>
@@ -41,28 +40,15 @@
                         <action selector="removeAction:" destination="-1" eventType="touchUpInside" id="Bgw-Xj-gys"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action triggered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQI-7d-tRB">
-                    <rect key="frame" x="0.0" y="596" width="375" height="71"/>
-                    <color key="backgroundColor" red="0.73140716206134737" green="1" blue="0.40286295476601131" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="71" id="uCr-O3-1xM"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                    <color key="textColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="MSi-eT-tuV" firstAttribute="top" secondItem="Eck-Kt-O8b" secondAttribute="bottom" constant="34" id="HYf-9Y-d7b"/>
                 <constraint firstItem="MSi-eT-tuV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ORv-4x-vzV"/>
-                <constraint firstAttribute="bottom" secondItem="eQI-7d-tRB" secondAttribute="bottom" id="UGe-TG-tcW"/>
                 <constraint firstItem="Eck-Kt-O8b" firstAttribute="top" secondItem="dDw-LV-kf3" secondAttribute="bottom" constant="15" id="Yhb-Cu-Ofj"/>
-                <constraint firstAttribute="trailing" secondItem="eQI-7d-tRB" secondAttribute="trailing" id="YyY-gj-C57"/>
                 <constraint firstItem="dDw-LV-kf3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hQb-s6-fXw"/>
                 <constraint firstItem="Eck-Kt-O8b" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mJQ-m8-Yy9"/>
                 <constraint firstItem="dDw-LV-kf3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="54" id="whz-Ic-VIq"/>
-                <constraint firstItem="eQI-7d-tRB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yBa-r5-Uz6"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>

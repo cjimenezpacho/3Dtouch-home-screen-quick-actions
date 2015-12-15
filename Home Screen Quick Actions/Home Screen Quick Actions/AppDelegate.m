@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate (){
+}
 
 @end
 
@@ -25,19 +26,15 @@
     UIViewController *rootController = [[ViewController alloc] init];
     self.window.rootViewController = rootController;
 
-    return YES;
+    UIApplicationShortcutItem *shortcutItem = [launchOptions objectForKey:UIApplicationLaunchOptionsShortcutItemKey];
+    return ![self handleShortCutItem:shortcutItem];
+    
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {}
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {}
-
-- (void)applicationWillTerminate:(UIApplication *)application {}
-
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler{
+    [self handleShortCutItem:shortcutItem];
+}
 
 - (BOOL)handleShortCutItem:(UIApplicationShortcutItem *)shortcutItem {
     BOOL handled = NO;
@@ -46,13 +43,9 @@
         return handled;
     }
     
-    //if ([shortcutItem.type isEqualToString:kFavoritesQuickAction]) {
-    //    handled = YES;
-    //}
-    
-    if (handled) {
-        // do action here
-    }
+    handled = YES;
+    UIAlertView *av = [[UIAlertView alloc]initWithTitle:@"Handle Shortcut" message:shortcutItem.type delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [av show];
     
     return handled;
     

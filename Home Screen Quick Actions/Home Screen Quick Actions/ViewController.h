@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController{
     __weak IBOutlet UILabel *_lblNumberOfActions;
-    __weak IBOutlet UILabel *_lblActionTriggered;
     
 }
 
